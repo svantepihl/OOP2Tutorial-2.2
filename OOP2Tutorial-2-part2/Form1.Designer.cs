@@ -36,6 +36,7 @@
             this.ProductPriceLabel = new System.Windows.Forms.Label();
             this.AddProduct = new System.Windows.Forms.Button();
             this.UpdateProduct = new System.Windows.Forms.Button();
+            this.ProductDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ProductList
@@ -96,11 +97,22 @@
             this.UpdateProduct.UseVisualStyleBackColor = true;
             this.UpdateProduct.Click += new System.EventHandler(this.UpdateProduct_Click);
             // 
+            // ProductDelete
+            // 
+            this.ProductDelete.Location = new System.Drawing.Point(87, 347);
+            this.ProductDelete.Name = "ProductDelete";
+            this.ProductDelete.Size = new System.Drawing.Size(75, 23);
+            this.ProductDelete.TabIndex = 7;
+            this.ProductDelete.Text = "Delete";
+            this.ProductDelete.UseVisualStyleBackColor = true;
+            this.ProductDelete.Click += new System.EventHandler(this.ProductDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(252, 408);
+            this.Controls.Add(this.ProductDelete);
             this.Controls.Add(this.UpdateProduct);
             this.Controls.Add(this.AddProduct);
             this.Controls.Add(this.ProductPriceLabel);
@@ -113,6 +125,8 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button ProductDelete;
 
         private System.Windows.Forms.TextBox ProductPriceField;
 

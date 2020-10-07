@@ -78,7 +78,7 @@ namespace OOP2Tutorial_2_part2
                     try
                     {
                         tmp.Price = i;
-                        ProductNameField.Text = "";
+                        ProductPriceField.Text = "";
                     }
                     catch (ValueOutOfBoundException error)
                     {
@@ -91,7 +91,7 @@ namespace OOP2Tutorial_2_part2
                     try
                     {
                         tmp.Name = ProductNameField.Text;
-                        ProductPriceField.Text = "";
+                        ProductNameField.Text = "";
                     }
                     catch (NullValueException error)
                     {
@@ -102,6 +102,15 @@ namespace OOP2Tutorial_2_part2
 
 
             }
+        }
+        /// <summary>
+        /// Removes the selected item from ProductList (listbox).
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ProductDelete_Click(object sender, EventArgs e)
+        {
+            ProductList.Items.Remove(ProductList.SelectedItem);
         }
     }
 }
